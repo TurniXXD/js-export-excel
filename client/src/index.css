@@ -1,0 +1,64 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./../public/img/bg-pattern.webp");
+}
+
+.root,
+#root,
+#docs-root {
+  --lightGrey: #C1CDD0;
+  --lightGreen: #7FD059;
+  --white: #FBFFF9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@layer utilities {
+  [class*='flex-'] {
+    display: flex;
+  }
+
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .p-0-i {
+    padding: 0 !important;
+  }
+
+  input {
+    border: 1px solid var(--lightGrey);
+    border-radius: 6px;
+  }
+
+  .header {
+    height: 5vh;
+    opacity: 0.7;
+    background: var(--lightGreen);
+    margin-bottom: 2vh;
+  }
+
+  .header h1 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+}
